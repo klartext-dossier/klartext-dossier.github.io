@@ -42,8 +42,8 @@ jobs:
           token: ${{ secrets.GH_PAT }}
           path: repo
 
-          - name: Dump
-        run: ls -lR repo
+      - name: Dump
+        run: ls -lR 
   
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
