@@ -42,8 +42,11 @@ jobs:
           token: ${{ secrets.GH_PAT }}
           path: repo
 
-      - name: Dump
-        run: ls -lR 
+      - name: Run mkdocs
+        run: mkdocs build -f repo/klartext/mkdocs.yml
+      
+      - name: Copy to docs directory
+        run: cp -a repo/klartext/site/* docs
   
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
