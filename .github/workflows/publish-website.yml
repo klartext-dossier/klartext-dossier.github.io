@@ -26,6 +26,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     runs-on: ubuntu-latest
+    container: klartext/pypeline:latest
 
     steps:
 
